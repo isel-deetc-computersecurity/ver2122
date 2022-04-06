@@ -14,7 +14,7 @@ import java.util.Enumeration;
 public class X509CertificateDemo {
     public static void main(String[] args) throws CertificateException, IOException {
         CertificateFactory factory = CertificateFactory.getInstance("X.509");
-        FileInputStream fis = new FileInputStream("C:\\work\\isel\\ensino\\SI\\ver2122\\aula07-09\\end-entities\\Alice_1.cer");
+        FileInputStream fis = new FileInputStream(".cer filename");
         Certificate cert = factory.generateCertificate(fis);
         PublicKey publicKey = cert.getPublicKey();
         //... use public key

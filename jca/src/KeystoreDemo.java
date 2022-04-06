@@ -12,13 +12,12 @@ public class KeystoreDemo {
     public static void main(String[] args) throws KeyStoreException, IOException, CertificateException, NoSuchAlgorithmException, UnrecoverableEntryException {
         KeyStore ks = KeyStore.getInstance("PKCS12");
         ks.load(
-            new FileInputStream("C:\\work\\isel\\ensino\\SI\\ver2122\\aula07-09\\pfx\\Alice_1.pfx"),
+            new FileInputStream("pfx filename"),
             "changeit".toCharArray()
         );
         Enumeration<String> entries = ks.aliases();
         while(entries.hasMoreElements()) {
             String alias = entries.nextElement();
-            System.out.println();
             System.out.println(ks.getKey(alias, "changeit".toCharArray()));
         }
     }
